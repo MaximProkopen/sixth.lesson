@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixth lesson</title>
+</head>
+
+<body>
+    <script>
+        function getResult(oneNumber, twoNumber, mathSigns) {
+
+            if (mathSigns === '*') {
+                return oneNumber * twoNumber;
+            } else if (mathSigns === '/') {
+                return oneNumber / twoNumber;
+            } else if (mathSigns === '+') {
+                return oneNumber + twoNumber;
+            } else if (mathSigns === '-') {
+                return oneNumber - twoNumber;
+            } else if (mathSigns === '**') {
+                return oneNumber ** twoNumber;
+            } else {
+                return ('Математическая операция не возможна');
+            }
+        }
+        let result = getResult(3, 4, '**');
+        console.log(result);
+
+
+        function isCharPresent(string, symbol, searchSymbol) {
+            for (let i = searchSymbol; i < string.length; i++) {
+                if (string[i] === symbol) {
+                    return true;
+                }
+            } return false;
+        }
+        let resultSymbol = isCharPresent('symbolMathematics', 'h', 4);
+        console.log(resultSymbol); 
+
+
+        function charIndexOf(stringIndex, symbolIndex, searchSymbolIndex) {
+            for (let i = searchSymbolIndex; i < stringIndex.length; i++) {
+                if (stringIndex[i] === symbolIndex) {
+                    return i;
+                }
+            } return -1;
+        }
+        let resultSymbolIndex = charIndexOf('symbolMathematicsIndex', 'u', 2);
+        console.log(resultSymbolIndex);
+        
+
+    </script>
+</body>
+
+</html>
